@@ -5,41 +5,138 @@
     --light-grey: #A5ABBD;
     --pink: #F1869C;
     --red: #B65168;
+
+    --margin-left: 200px;
 }
 
 *{
 
 }
 
+body{
+
+    height: 200vh;
+    
+}
+
 header{
-    display:block;
+
+    position: fixed;
+    display: flex;
     flex-direction: column;
-    background-color: var(--blue);
+    justify-content: space-around;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    border-style: solid;
+    border-color: red;
+    
+
+}
+
+header h1{  
+
+    width:var(--margin-left);
+    height: 100px;
+    
+
+    border-style: solid;
+    border-color:blue;
+    background-color: lightgray;
 }
 
 header nav{
-    justify-content: center;
-    margin: 0 auto;
+
+    height: 200px;
+    border-style: solid;
+    border-color:blue;
+    background-color: lightgray;
+
+
 }
 
 main{
-    background-color: var(--red);
+
+    display: flex;
+    
+    margin-left:var(--margin-left);
+   
+
+    border-style: solid;
+    border-color: red;
+    background-color: lightgray;
+
 }
 
-aside{
-    background-color: var(--blue);
-}
+
 
 footer{
-    background-color: var(--red);
+    margin-left:var(--margin-left);
+
+    border-style: solid;
+    border-color: red;
+    background-color: lightgray;
 }
 
 /* sets the look when the website is viewed on tablet */
 @media screen and (max-width: 992px){
+
+    header{
+
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        top:0;
+        width: 100%;
+        height: 100px;
+        border-style: solid;
+        border-color: red;
+        background-color: lightgray;
+    
+    }
+
+    header nav{
+  
+        float: right;
+        width: 200px;
+        height: 100px;
+        border-style: solid;
+        border-color:blue;
+        background-color: lightgray;
+    
+    
+    }
+
 
 }
 
 /* sets the look when the website is viewed on phone */
 @media screen and (max-width: 768px){
 
+
+    header{
+
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        border-style: solid;
+        border-color: red;
+        background-color: lightgray;
+    
+    }
+
+    header nav{
+
+        width: 200px;
+        height: 100px;
+        border-style: solid;
+        border-color:blue;
+        background-color: lightgray;
+    
+    }
 }
