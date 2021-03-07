@@ -1,0 +1,45 @@
+/* setting variables */
+:root{
+    --blue: #7CA6F4;
+    --dark-grey: #414756;
+    --light-grey: #A5ABBD;
+    --pink: #F1869C;
+    --red: #B65168;
+}
+
+*{
+
+}
+
+header{
+    display:block;
+    flex-direction: column;
+    background-color: var(--blue);
+}
+
+header nav{
+    justify-content: center;
+    margin: 0 auto;
+}
+
+main{
+    background-color: var(--red);
+}
+
+aside{
+    background-color: var(--blue);
+}
+
+footer{
+    background-color: var(--red);
+}
+
+/* sets the look when the website is viewed on tablet */
+@media screen and (max-width: 992px){
+
+}
+
+/* sets the look when the website is viewed on phone */
+@media screen and (max-width: 768px){
+
+}
