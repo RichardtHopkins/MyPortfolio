@@ -12,13 +12,12 @@
     src: url(OldSansBlack.ttf);
 }
 
-
-
 body{
 
     display:flex;
     flex-direction:column;
-    height: 150vh;    
+    min-height: 100vh;
+        
 }
 
 
@@ -35,23 +34,20 @@ body{
     background-color: var(--yellow);
 }
 
-
-
+/* paretn for all header and nav */
 header{
 
+    z-index: 1;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: flex-start;
     padding-right: 5px var(--yellow);
-    
-
     z-index:1;
-
     width: 200px;
     height: 100%;
-
+    
 }
 
 .heading-logo{  
@@ -60,18 +56,13 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
     font-family: OldSansBlack;
     font-size: 45px;
     color: var(--orange);
-    
-
     width:var(--margin-left);
     height: 200px;
-
     background-color:var(--grey);
-
-    
+    box-shadow: inset -2px , 5px darkgray;
 
 }
 
@@ -81,66 +72,49 @@ header{
 
 }
 
-.nav-option a::after {
-
-    content:" ";
-    display:block;
-    width: 0px;
-    height: 2px;
-    background:var(--yellow);
-    transition: width .3s;
-
-}
-
-.nav-option a:hover::after{
-    width: 100%;
-    transition: width .3s;
-}
-
 .nav-options{
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     font-family: OldSansBlack;
     font-size: 20px;
     color:white;
-
     width:200px;
-
     flex-grow:1;    
     background-color: var(--grey);
 
-    
-
-
 }
 
+/* parent for everthing under about me */
+.about-me{
 
 
-main{
-
-    position:relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content:space-around;
-    flex-grow:1;    
+    height: 75vh;
     margin-left:var(--margin-left);
-    border-style: solid;
-    border-color: red;
+    background-color: lightpink;
+
+}
+
+
+/* parent for everything under main */
+.my-work{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:space-around; 
+    margin-left:var(--margin-left);
     background-color: lightgreen;
 
 }
 
-main p{
 
-    position:absolute;
-    height:20px
-
-}
 
 .feature-project{
 
@@ -148,8 +122,9 @@ main p{
     height:400px;
     width: 900px;
     margin: 50px;
-    background-color: red;
-    border: 3px solid blue;
+    border-radius:10px;
+    background-color: lightcoral;
+
 
 }
 
@@ -159,18 +134,22 @@ main p{
     width:400px;
     height: 400px;
     margin: 50px;
-    background-color: red;
-    border: 3px solid blue;
+    border-radius:10px;
+    background-color: lightcoral;
+
 }
 
+/* parent for everthing under contact infor section */
+.contact-info{
 
-footer{
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:space-around;
+    height: 25vh;
     margin-left:var(--margin-left);
-    flex-grow:0;
-    border-style: solid;
-    border-color: red;
-    background-color: lightgray;
+    background-color: lightskyblue;
 }
 
 
@@ -178,142 +157,14 @@ footer{
 /* sets the look when the website is viewed on tablet */
 @media screen and (max-width: 992px){
 
-    header{
-
-        position: fixed;
-        display: flex;
-        flex-direction: row;
-        justify-content:flex-start;
-        align-items: center;
-        z-index: 1;
-        width: 100%;
-        height: 100px;
-        border-style: solid;
-        border-color: red;
-        
-    
-    }
-    
-    header h1{  
-    
-        width:100px;
-        height: 100px;
-        
-    
-        border-style: solid;
-        border-color:blue;
-        background-color: lightgray;
-    }
-    
-    .nav-list{
-    
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-
-        
-    
-        height: 100px;
-        flex-grow:1;
-    
-    
-        border-style: solid;
-        border-color:blue;
-        background-color: lightgray;
-    
-    
-    }
-
-    .nav-list ul li{
-        display: inline;
-    }
-
-    main{
-
-        display: flex;
-        flex-grow:1;
-        margin-top:100px;
-        margin-left:0px; 
-        border-style: solid;
-        border-color: red;
-        background-color: lightgray;
-    
-    }
-
-    footer{
-
-        margin-left:0px;
-        flex-grow:0;
-        border-style: solid;
-        border-color: red;
-        background-color: lightgray;
-    }
 
 }
+
 
 /* sets the look when the website is viewed on phone */
 @media screen and (max-width: 768px){
 
-    header{
+    
 
-        position: fixed;
-        display: flex;
-        flex-direction: row;
-        justify-content:flex-start;
-        align-items: center;
-        z-index: 1;
-        width: 100%;
-        height: 100px;
-        border-style: solid;
-        border-color: red;
-        
-    
-    }
-    
-    header h1{  
-    
-        width:100px;
-        height: 100px;
-        
-    
-        border-style: solid;
-        border-color:blue;
-        background-color: lightgray;
-    }
-    
-    .nav-list{
-    
-        display: flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items: center;
-
-        
-    
-        height: 100px;
-        flex-grow:1;
-    
-    
-        border-style: solid;
-        border-color:blue;
-        background-color: lightgray;
-    
-    
-    }
-
-    .nav-list ul li{
-        display: inline;
-    }
-
-    footer{
-
-        margin-left:0px;
-        flex-grow:0;
-        border-style: solid;
-        border-color: red;
-        background-color: lightgray;
-
-    }
 
 }
