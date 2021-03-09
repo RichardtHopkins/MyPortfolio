@@ -12,6 +12,8 @@
     src: url(OldSansBlack.ttf);
 }
 
+
+
 body{
 
     display:flex;
@@ -19,16 +21,17 @@ body{
     height: 150vh;    
 }
 
+
 .nav-options a:link{
     color:white;
     text-decoration:none;
 }
-
+ 
 .nav-options a:visited{
     color:white;
-}
+} 
 
-.nav-options a:hover{
+ .nav-options a:hover{
     background-color: var(--yellow);
 }
 
@@ -76,6 +79,22 @@ header{
 
     transition: background-color 1s;
 
+}
+
+.nav-option a::after {
+
+    content:" ";
+    display:block;
+    width: 0px;
+    height: 2px;
+    background:var(--yellow);
+    transition: width .3s;
+
+}
+
+.nav-option a:hover::after{
+    width: 100%;
+    transition: width .3s;
 }
 
 .nav-options{
