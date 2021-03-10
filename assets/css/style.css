@@ -1,41 +1,35 @@
 /* setting variables */
 :root{
     --grey: #494B49;
+    --grey2: #cdcdcd;
     --orange: #cf7500;
     --yellow: #f0a500;
 
     --margin-left: 200px;
 }
 
+/* imports the OldSansBlack font */
 @font-face{
     font-family: OldSansBlack;
     src: url(OldSansBlack.ttf);
 }
 
+* {
+    box-sizing: border-box;
+  }
+
+/* settings for the body. Set to flex. */
 body{
 
     display:flex;
-    flex-direction:column;
+    flex-direction: column;
     min-height: 100vh;
         
 }
 
 
-.nav-options a:link{
-    color:white;
-    text-decoration:none;
-}
- 
-.nav-options a:visited{
-    color:white;
-} 
-
- .nav-options a:hover{
-    background-color: var(--yellow);
-}
-
 /* paretn for all header and nav */
-header{
+.header{
 
     z-index: 1;
     position: fixed;
@@ -43,14 +37,15 @@ header{
     flex-direction: column;
     justify-content:flex-start;
     align-items: flex-start;
-    padding-right: 5px var(--yellow);
     z-index:1;
     width: 200px;
     height: 100%;
+    background-color:var(--grey);
+    box-shadow: inset -2px , 5px darkgray;
     
 }
 
-.heading-logo{  
+.heading-text{  
 
     display:flex;
     flex-direction: column;
@@ -58,51 +53,104 @@ header{
     align-items: center;
     font-family: OldSansBlack;
     font-size: 45px;
-    color: var(--orange);
+    
+    color: var(--grey2);
     width:var(--margin-left);
     height: 200px;
-    background-color:var(--grey);
+    /* background-color:var(--grey); */
     box-shadow: inset -2px , 5px darkgray;
 
 }
 
-.nav-options a{
-
-    transition: background-color 1s;
+.heading-text h1{
+    
+    padding: 10px 0px 10px 20px;
+    line-height: 1em;
 
 }
 
-.nav-options{
+.nav-menu{      
+    visibility: hidden;
+}
+
+.nav-links a{
+
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 400px;
+    overflow: hidden;
+
+    /* clip animation for the nav text */
+    background: linear-gradient(
+        to right,
+        var(--yellow),
+        var(--yellow) 50%,
+        var(--grey2) 50%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+
+}
+
+.nav-links{
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: OldSansBlack;
-    font-size: 20px;
-    color:white;
-    width:200px;
-    flex-grow:1;    
+    width:200px; 
+    height: 55px;
+       
     background-color: var(--grey);
 
 }
 
-/* parent for everthing under about me */
-.about-me{
+/* Takes the underline off of the links in the nav and changes there colour to the grey 2 variable */
+.nav-links a:link{
+    color:var(--grey2);
+    text-decoration:none;
+}
+ 
+/* takes away the colour change when a link is clicked on */
+.nav-links a:visited{
+    color:var(--grey2);
+} 
 
+/* on hover changes the background position of the clip for the nav link colour change */
+ .nav-links a:hover{
+
+    background-position: 0 100%;
+}
+
+/* Styling for the main tag. */
+main{
+
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    background-color: var(--grey2);
+
+}
+
+
+.about-me{
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content:space-around;
-    height: 75vh;
-    margin-left:var(--margin-left);
-    background-color: lightpink;
+
 
 }
 
-
-/* parent for everything under main */
 .my-work{
 
     display: flex;
@@ -114,17 +162,16 @@ header{
 
 }
 
-
-
 .feature-project{
 
     display:inline-flex;
+    justify-content: center;
+    align-content: center;
     height:400px;
     width: 900px;
     margin: 50px;
     border-radius:10px;
     background-color: lightcoral;
-
 
 }
 
@@ -139,32 +186,162 @@ header{
 
 }
 
-/* parent for everthing under contact infor section */
 .contact-info{
 
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content:space-around;
-    height: 25vh;
-    margin-left:var(--margin-left);
-    background-color: lightskyblue;
+    align-content:space-around; 
+
+
+
 }
-
-
 
 /* sets the look when the website is viewed on tablet */
 @media screen and (max-width: 992px){
 
+    .header{
 
-}
+        z-index: 1;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: flex-start;
+        z-index:1;
+        width: 100%;
+        height: 50px;
+        box-shadow: inset -2px -2px 10px #626362;
+        
+    }
+    
+    .heading-text{  
+
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-family: OldSansBlack;
+        font-size: 20px;
+        color:var(--grey2);
+        width:75%;
+        flex-grow:1;
+        height: 50px;
+    
+    }
+    
+    .heading-text h1{
+        
+        padding: 5px;        
+
+    }
 
 
-/* sets the look when the website is viewed on phone */
-@media screen and (max-width: 768px){
+    .nav-links{
+
+        position: absolute;
+        visibility: hidden;
+
+    }
+
+    .nav-menu{
+        
+        visibility: visible;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: OldSansBlack;
+        font-size: 20px;
+        color:var(--grey2);
+        width:25%;
+        flex-grow:1;
+        height: 50px;
+
+    }  
+
+    .nav-content{
+        display: none;
+        position: absolute;
+        top:50px;
+        background-color: var(--grey);
+        min-width: 25%;
+        z-index: 1;
+    }
+
+    .nav-content a {
+        color: var(--grey2);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .nav-content a:hover{
+
+    }
+
+    .nav-menu:hover .nav-content{
+        display:block;
+    }
+
+    .nav-menu:hover .dropbtn {
+        background-color: #3e8e41;
+      } 
 
     
+/* 
+    .dropdown-content a:hover {background-color: #f1f1f1}
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.
+dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
+
+
+
+    /* parent for everthing under about me */
+    /* .about-me{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content:space-around;
+        height: 75vh;
+        margin:50px 0px 0px 0px;
+        background-color: lightpink;
+
+    } */
+
+
+    /* parent for everything under main */
+    /* .my-work{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content:space-around; 
+        margin: 0px;
+        background-color: lightgreen;
+
+    } */
+    
+    /* parent for everthing under contact infor section */
+    /* .contact-info{
+
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content:space-around;
+        height: 25vh;
+        margin: 0px;
+        background-color: lightskyblue;
+
+    } */
 
 }
