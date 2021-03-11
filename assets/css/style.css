@@ -129,7 +129,7 @@ body{
 main{
 
     display:flex;
-    flex: 0 1 100%;
+    flex: 1 1 100%;
     flex-wrap: wrap;
     flex-direction: row;
 
@@ -152,15 +152,20 @@ main{
 
     position: relative;
     display: flex;
-    flex: 1 1 100%
-    justify-content: flex-end;
+    flex: 1 1 100%;
+    justify-content: center;
     align-items: center;
 
 }
 
 .my-work{
 
-
+position:relative;
+display:flex;
+flex-wrap:wrap;
+flex: 1 1 100%;
+justify-content: center;
+align-content: center;
 
 }
 
@@ -190,6 +195,10 @@ main{
 
 .contact-info{
 
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-content: center;
 
 }
 
