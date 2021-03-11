@@ -23,7 +23,6 @@ body{
 
     display:flex;
     flex-direction: column;
-    min-height: 100vh;
         
 }
 
@@ -38,7 +37,7 @@ body{
     justify-content:flex-start;
     align-items: flex-start;
     z-index:1;
-    width: 200px;
+    width: 12em;
     height: 100%;
     background-color:var(--grey);
     box-shadow: inset -2px , 5px darkgray;
@@ -56,7 +55,7 @@ body{
     
     color: var(--grey2);
     width:var(--margin-left);
-    height: 200px;
+    height: 4em;
     /* background-color:var(--grey); */
     box-shadow: inset -2px , 5px darkgray;
 
@@ -78,7 +77,6 @@ body{
     position: relative;
     display: inline-block;
     font-size: 1.5em;
-    font-weight: 400px;
     overflow: hidden;
 
     /* clip animation for the nav text */
@@ -104,9 +102,8 @@ body{
     justify-content: center;
     align-items: center;
     font-family: OldSansBlack;
-    width:200px; 
-    height: 55px;
-       
+    width:12em; 
+    height: 4em;
     background-color: var(--grey);
 
 }
@@ -132,33 +129,38 @@ body{
 main{
 
     display:flex;
+    flex: 0 1 100%;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    align-content: space-around;
+
     background-color: var(--grey2);
+
+    margin-left: 200px;
+    /* width: 83rem;
+    height: auto; */
+
+}
+
+.main-headings{
+
+    position: absolute;
 
 }
 
 
 .about-me{
 
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content:space-around;
-
+    flex: 1 1 100%
+    justify-content: flex-end;
+    align-items: center;
 
 }
 
 .my-work{
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content:space-around; 
-    margin-left:var(--margin-left);
-    background-color: lightgreen;
+
 
 }
 
@@ -187,13 +189,6 @@ main{
 }
 
 .contact-info{
-
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content:space-around; 
-
 
 
 }
@@ -277,10 +272,6 @@ main{
         display: block;
     }
 
-    .nav-content a:hover{
-
-    }
-
     .nav-menu:hover .nav-content{
         display:block;
     }
@@ -289,48 +280,19 @@ main{
         background-color: #3e8e41;
       } 
 
-    
+
+    main{
+
+       
+
+    }
 
 
 
-    /* parent for everthing under about me */
-    /* .about-me{
+   
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content:space-around;
-        height: 75vh;
-        margin:50px 0px 0px 0px;
-        background-color: lightpink;
+}
 
-    } */
-
-
-    /* parent for everything under main */
-    /* .my-work{
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content:space-around; 
-        margin: 0px;
-        background-color: lightgreen;
-
-    } */
-    
-    /* parent for everthing under contact infor section */
-    /* .contact-info{
-
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content:space-around;
-        height: 25vh;
-        margin: 0px;
-        background-color: lightskyblue;
-
-    } */
+@media screen and (max-width: 600px){
 
 }
