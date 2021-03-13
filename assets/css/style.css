@@ -14,69 +14,76 @@
     src: url(OldSansBlack.ttf);
 }
 
+/* set box sizing to border box for everthing */
 * {
     box-sizing: border-box;
+    
   }
 
-/* settings for the body. Set to flex. */
+/* set the display and the flex direction for so that the nave stays in the correct place */
 body{
 
-    display:flex;
+    display: flex;
     flex-direction: column;
-        
+
 }
 
-
-/* paretn for all header and nav */
+/* styling for the header and nav bar */
 .header{
 
-    z-index: 1;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: flex-start;
-    z-index:1;
     width: 12em;
     height: 100%;
     background-color:var(--grey);
     box-shadow: inset -2px , 5px darkgray;
-
     border-right:.3em solid var(--orange);
-    
+
 }
 
-.heading-text{  
+/* settings for the main heading text */
+.heading-text{
 
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     font-family: OldSansBlack;
-    font-size: 45px;
-    
+    font-size: 2.5em;
+
+    padding: 10px 0px 10px 20px;
+    line-height: 1em;
+
     color: var(--grey2);
     width:var(--margin-left);
     height: 4em;
-    /* background-color:var(--grey); */
     box-shadow: inset -2px , 5px darkgray;
 
 }
 
-.heading-text h1{
-    
-    padding: 10px 0px 10px 20px;
-    line-height: 1em;
-
-}
-
-.nav-menu{      
+/* sets the nav menu for the in hidden for mobile screens */
+.nav-menu{
     visibility: hidden;
 }
 
+/* settings for the nav section tags */
+.nav-links{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: OldSansBlack;
+    width:12em;
+    height: 4em;
+}
+
+/* styling for the main nav link text */
 .nav-links a{
 
-    position: relative;
     display: inline-block;
     font-size: 1.5em;
     overflow: hidden;
@@ -97,29 +104,16 @@ body{
 
 }
 
-.nav-links{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: OldSansBlack;
-    width:12em; 
-    height: 4em;
-
-
-}
-
 /* Takes the underline off of the links in the nav and changes there colour to the grey 2 variable */
 .nav-links a:link{
     color:var(--grey2);
     text-decoration:none;
 }
- 
+
 /* takes away the colour change when a link is clicked on */
 .nav-links a:visited{
     color:var(--grey2);
-} 
+}
 
 /* on hover changes the background position of the clip for the nav link colour change */
  .nav-links a:hover{
@@ -127,10 +121,10 @@ body{
     background-position: 0 100%;
 }
 
-/* Styling for the main tag. */
+/* settings for the main tag. */
 main{
 
-    
+
     display:flex;
     flex: 0 1 100%;
     flex-wrap: wrap;
@@ -141,6 +135,7 @@ main{
 
 }
 
+/* styling the heading for each content section in the main tag */
 .main-headings{
 
 
@@ -153,10 +148,11 @@ main{
     padding: 1em;
     margin: .5em;
     color:var(--grey);
-    
+
 
 }
 
+/* styling fo the divider underlin under each heading */
 .divider{
 
     display: block;
@@ -170,9 +166,10 @@ main{
 
     border-radius: .3em;
     background-color: var(--yellow);
-    
+
 }
 
+/* setting for the about me section */
 .about-me{
 
     position: relative;
@@ -182,79 +179,163 @@ main{
     justify-content: flex-start;
     align-items: center;
 
-    height: 45vh;
-
 }
 
+/* styling for the about me image */
 .about-me img{
 
- 
+    position: relative;
     margin-left: 5em;
     margin-top:5em;
     border-radius: .2em;
     border: .3em  solid var(--orange);
 
+    max-width: 100%;
+    height: auto;
+
 
 }
 
+/* styling for the about me paragragh text */
 .about-me p{
 
+    position: relative;
     display: flex;
-    flex: 0 1 50%;
+    
+    width:50%;
 
- 
     margin-top:5em;
     margin-left:2em;
-    
     padding: 2em;
     font-size: 1em;
     line-height: 1.2em;
-
     font-family: OldSansBlack;
     color:var(--grey2);
     background-color: var(--grey);
 
 }
-.my-work{
+
+/* setting for the my projects section */
+.my-projects{
 
     position:relative;
     display:flex;
     flex-wrap: wrap;
-    flex: 0 1 100%;
+    flex-direction: row;
+    margin-left:0;
+    
     justify-content: center;
     align-content: center;
 
-    height: 130vh;
-
 }
 
+/* setting for the feature project */
 .feature-project{
 
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    padding-bottom:3em;
-    
+    position: relative;
+    display:flex;
     flex: 0 1 100%;
-    height: 60vh;
+    justify-content: flex-start;
+    min-width:100%;
+    /* height: auto; */
+    margin-top: 5em;
+
+}
+
+/* styling for the feature project */
+.main-project{
+
+    position: relative;
+    left: 5em;
+ 
+    border: .3em solid var(--yellow);
+    border-radius: .1em;
+    min-width: 250px;
+    max-width: 100%;
+    height: auto;
 
 
 }
 
+/* transition styling for the feature */
+.main-project::after{
+
+    position: absolute;
+    content: "Horiseon Code Refactor";
+
+    left:0;
+    top:0;
+
+    padding: 1em;
+
+    color: var(--grey2);
+    background-color: var(--orange);
+
+    
+
+    transition: opacity .5s ease;
+    opacity: 0;
+
+}
+
+/* transition styling for the feature */
+.main-project:hover::after{
+    opacity: 1;
+}
+
+/* setting for the mini projects section */
 .projects{
 
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     flex:0 1 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 30vh;
-    padding: 5em;
-    
+    justify-content:flex-start;
+    margin-top:2em;
 
 }
 
+/* mini project styling */
+.mini-projects{
+
+    position: relative;
+    margin: 5em;
+    background-color:var(--grey);
+    border: .3em solid var(--yellow);
+    border-radius: .2em;
+
+}
+
+/* mini project transition styling */
+.mini-projects::after{
+
+    position: absolute;
+    content: "Coming soon!";
+
+    left:0;
+    top:0;
+
+    padding: 1em;
+
+    color: var(--grey2);
+    background-color: var(--orange);
+
+    
+
+    transition: opacity .5s ease;
+    opacity: 0;
+
+}
+
+/* mini project transition styling */
+.mini-projects:hover::after{
+
+    opacity: 1;
+
+
+}
+
+/* contact info section settings */
 .contact-info{
 
     position: relative;
@@ -266,33 +347,44 @@ main{
     height: 25vh;
 }
 
+/* setting for the contact list section */
 .contact-list{
+
     display:flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top:3em;
 
 }
+
+/* takes of the styling for lists */
 .contact-list li{
+
     list-style-type: none;
     display:inline;
 }
 
+/* setting and styling for phone number and email address in contact info */
 .contact-list h2{
 
-    color:var(--grey1);
+    display:inline;
+    color:var(--grey);
+    padding: 1.5em
 
 }
 
+/* setting and styling for the link in the contact infor section */
 .contact-list a{
 
-    text-decoration: none;
-    padding: 2em;
+    color:var(--grey);
+    text-decoration:none;
+    padding: 1.5em;
+
+
 
 }
 
-
-/* sets the look when the website is viewed on tablet */
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1030px){
 
     .header{
 
@@ -306,10 +398,10 @@ main{
         min-width: 100%;
         height: 50px;
         box-shadow: inset -2px -2px 10px #626362;
-        
+
     }
-    
-    .heading-text{  
+
+    .heading-text{
 
         display:flex;
         flex-direction: row;
@@ -321,16 +413,15 @@ main{
         min-width:75%;
         flex-grow:1;
         height: 50px;
-    
+
     }
-    
+
     .heading-text h1{
-        
-        padding: 5px;        
+
+        padding: 5px;
 
     }
 
-    
     .nav-links{
 
         position: absolute;
@@ -340,7 +431,7 @@ main{
 
 
     .nav-menu{
-        
+
         visibility: visible;
         display:flex;
         flex-direction: row;
@@ -352,10 +443,9 @@ main{
         min-width:25%;
         flex-grow:1;
         height: 50px;
-
         text-decoration: underline;
 
-    }  
+    }
 
     .nav-content{
         display: none;
@@ -371,8 +461,6 @@ main{
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-
-
 
         /* clip animation for the nav text */
         background: linear-gradient(
@@ -393,10 +481,6 @@ main{
         display:block;
     }
 
-    .nav-menu:hover .dropbtn {
-        background-color: #3e8e41;
-      } 
-
     /* on hover changes the background position of the clip for the nav link colour change */
     .nav-content a:hover{
 
@@ -406,31 +490,118 @@ main{
 
     main{
 
-        margin-top: 4rem;
+        width:100%;
+        margin-top: 3.1rem;
         margin-left: 0;
-        min-width:100%;
-
+        
     }
 
     .about-me{
 
+        justify-content: center;
+        
+    }
+
+    .about-me img{
+
+        margin-top:5em;
+        margin-left: 0;
 
     }
 
+    .about-me p{
+
+        position: relative;
+        display: flex;
+
+        justify-self: center;
+        
+        width:100%;
+    
+        margin-top:3em;
+        margin-left:0;
+       
+        padding: 2em;
+        font-size: 1.3em;
+
+        line-height: 1.2em;
+        font-family: OldSansBlack;
+        color:var(--grey2);
+        background-color: var(--grey);
+    
+    }
+
+    .feature-project{
+
+        left:0;
+        justify-content: center;
+      
+    
+    }
+    
+    .main-project{
+    
+        position: relative;
+        left:0;
+
+    }
+    
+    .projects{
+    
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        flex:0 1 100%;
+        justify-content: center;
+        margin-top:2em;
+    
+    }
+    
+    .mini-projects{
+    
+        position: relative;
+
+        margin: 3em;
+        background-color:var(--grey);
+        border: .3em solid var(--yellow);
+        border-radius: .2em;
+    
+    }
+    
     .contact-info{
 
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        
+        
 
     }
 
+    .contact-list{
 
+        display:flex;
+        flex-direction:column;
+        justify-items: center;
+        flex-wrap:wrap;
+        align-items: center;
+        margin-top: 5em;
 
+        height:15em;
 
+    }
 
+    .contact-list h2{
+        padding:.2em;
+    }
 
-   
+    .contact-list a{
+
+        padding: .2em;
+
+    }
 
 }
 
-@media screen and (max-width: 600px){
-
-}
