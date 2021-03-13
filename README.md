@@ -2,15 +2,15 @@
 
 ## Description:
 
-This repo contains the refactored version of the Horiseon web page. In refactoring this web page i have applied semantic html elements and css, consolidated code where possible, reformated code to make it more readable and commented code to describe what it does.
+Portfolio for richard Hopkins.
 
 
 ## Screenshoots of website:
 
-![The header, navigation bar, and background image at the top of the screen.](./assets/images/my portfolio image.png)
+![image of my portfolio.](./assets/images/myportfolioimage.png)
 
 
 
 ## Link to live website:
 
-[Link to Horiseon website](https://richardthopkins.github.io/MyPortfolio/)
+[Link to my portfolio](https://richardthopkins.github.io/MyPortfolio/)
